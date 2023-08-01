@@ -43,7 +43,7 @@ int main()
 
     /**********build and compile shader program**********/
     // Note: relattive path (for executable file)
-    Shader ourShader("../Ch1-Gettint_Started/3.4 shaders_exercises/shader2.vert", "../Ch1-Gettint_Started/3.4 shaders_exercises/shader.frag");
+    Shader ourShader("shader.vert", "shader.frag");
 
     /********** Set up vertex data (and buffer(s)) and configure vertex attributes **************/
     float vertices[] = {
@@ -84,8 +84,6 @@ int main()
 
         // draw triangle
         ourShader.use();
-        float offset = 0.5f;
-        ourShader.setFloat("xOffset", offset);
         glBindVertexArray(VAO);
         glDrawArrays(GL_TRIANGLES, 0, 3);
 
