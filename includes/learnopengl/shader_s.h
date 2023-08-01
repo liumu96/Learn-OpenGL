@@ -29,9 +29,7 @@ public:
         try
         {
             // open files
-            std::cout << "test start" << std::endl;
             vShaderFile.open(vertexPath);
-            std::cout << "test" << std::endl;
             fShaderFile.open(fragmentPath);
             std::stringstream vShaderStream, fShaderStream;
             // read file's buffer contents into streams

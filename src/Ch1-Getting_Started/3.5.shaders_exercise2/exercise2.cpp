@@ -43,7 +43,7 @@ int main()
 
     /**********build and compile shader program**********/
     // Note: relattive path (for executable file)
-    Shader ourShader("shader.vert", "shader.frag");
+    Shader ourShader("shader2.vert", "shader2.frag");
 
     /********** Set up vertex data (and buffer(s)) and configure vertex attributes **************/
     float vertices[] = {

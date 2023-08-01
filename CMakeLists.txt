@@ -16,7 +16,6 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake/mo
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
 find_package(GLFW3 REQUIRED)
-message(STATUS "Found GLFW3 in ${GLFW3_INCLUDE_DIR} ${CMAKE_MODULE_PATH}") 
 
 if (APPLE)
     INCLUDE_DIRECTORIES(/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks)
@@ -32,7 +31,6 @@ if (APPLE)
     SET(APPLE_LIBS ${APPLE_LIBS} ${GLFW3_LIBRARY})
     
     set(LIBS ${LIBS} ${APPLE_LIBS})
-    # message(${GLFW3_LIBRARY} "GLFW3" ${LIBS} "APPLE LIBS")
 endif(APPLE)
 
 set(CHAPTERS
@@ -52,6 +50,12 @@ set(Ch1-Getting_Started
     3.4.shaders_exercise1
     3.5.shaders_exercise2
     3.6.shaders_exercise3
+    4.1.textures
+    4.2.textures_combined
+    4.3.textures_exercise1
+    4.4.textures_exercise2
+    4.5.textures_exercise3
+    4.6.textures_exercise4
     )
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)

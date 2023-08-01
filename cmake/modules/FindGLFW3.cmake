@@ -1,4 +1,3 @@
-message("<FindSDL2.cmake>")
 set(_glfw3_HEADER_SEARCH_DIRS
 "/opt/homebrew/include"
 "/usr/include"
