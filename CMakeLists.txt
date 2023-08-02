@@ -62,6 +62,10 @@ set(Ch1-Getting_Started
     5.1.transformations
     5.2.transformations_exercise1
     5.2.transformations_exercise2
+    6.1.coordinate_systems
+    6.2.coordinate_systems_depth
+    6.3.coordinate_systems_multiple
+    6.4.coordinate_systems_exercise3
     )
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)
