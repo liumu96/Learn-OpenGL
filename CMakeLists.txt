@@ -15,7 +15,10 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake/mo
 
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
+find_package(GLM REQUIRED)
+message(STATUS "GLM included at ${GLM_INCLUDE_DIR}")
 find_package(GLFW3 REQUIRED)
+message(STATUS "Found GLFW3 in ${GLFW3_INCLUDE_DIR}")
 
 if (APPLE)
     INCLUDE_DIRECTORIES(/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks)
@@ -38,24 +41,25 @@ set(CHAPTERS
 )
 
 set(Ch1-Getting_Started
-    1.1.hello_window
-    2.1.hello_triangle
-    2.2.hello_triangle_indexed
-    2.3.hello_triangle_exercise1
-    2.4.hello_triangle_exercise2
-    2.5.hello_triangle_exercise3
-    3.1.shaders_uniform
-    3.2.shaders_interpolation
-    3.3.shaders_class
-    3.4.shaders_exercise1
-    3.5.shaders_exercise2
-    3.6.shaders_exercise3
-    4.1.textures
-    4.2.textures_combined
-    4.3.textures_exercise1
-    4.4.textures_exercise2
-    4.5.textures_exercise3
-    4.6.textures_exercise4
+    # 1.1.hello_window
+    # 2.1.hello_triangle
+    # 2.2.hello_triangle_indexed
+    # 2.3.hello_triangle_exercise1
+    # 2.4.hello_triangle_exercise2
+    # 2.5.hello_triangle_exercise3
+    # 3.1.shaders_uniform
+    # 3.2.shaders_interpolation
+    # 3.3.shaders_class
+    # 3.4.shaders_exercise1
+    # 3.5.shaders_exercise2
+    # 3.6.shaders_exercise3
+    # 4.1.textures
+    # 4.2.textures_combined
+    # 4.3.textures_exercise1
+    # 4.4.textures_exercise2
+    # 4.5.textures_exercise3
+    # 4.6.textures_exercise4
+    5.1.transformations
     )
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)
