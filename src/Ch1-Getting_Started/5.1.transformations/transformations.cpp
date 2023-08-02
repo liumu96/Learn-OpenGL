@@ -2,6 +2,10 @@
 #include <GLFW/glfw3.h>
 #include <stb_image.h>
 
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+
 #include <learnopengl/filesystem.h>
 #include <learnopengl/shader_s.h>
 
@@ -43,7 +47,7 @@ int main()
     }
 
     /**********build and compile shader program**********/
-    Shader ourShader("texture.vert", "4.2.texture.frag");
+    Shader ourShader("5.1.transform.vert", "5.1.transform.frag");
 
     /********** Set up vertex data (and buffer(s)) and configure vertex attributes **************/
     float vertices[] = {
@@ -149,8 +153,16 @@ int main()
         glActiveTexture(GL_TEXTURE1);
         glBindTexture(GL_TEXTURE_2D, texture2);
 
+        // create transformations
+        glm::mat4 transform = glm::mat4(1.0f);
+        transform = glm::translate(transform, glm::vec3(0.5f, -0.5f, 0.0f));
+        transform = glm::rotate(transform, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
+
         // render container
         ourShader.use();
+        unsigned int transformLoc = glGetUniformLocation(ourShader.ID, "transform");
+        glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));
+
         glBindVertexArray(VAO);
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
