@@ -38,6 +38,7 @@ endif(APPLE)
 
 set(CHAPTERS
     Ch1-Getting_Started
+    Ch2-Lighting
 )
 
 set(Ch1-Getting_Started
@@ -72,7 +73,16 @@ set(Ch1-Getting_Started
     7.4.camera_class
     7.5.camera_exercise1
     7.6.camera_exercise2
-    )
+)
+
+set(Ch2-Lighting
+    1.colors
+    2.1.basic_lighting_diffuse
+    2.2.basic_lighting_specular
+    2.3.basic_lighting_exercise1
+    2.4.basic_lighting_exercise2
+    2.5.basic_lighting_exercise3
+)
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)
 include_directories(${CMAKE_BINARY_DIR}/configuration)
