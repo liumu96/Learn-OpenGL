@@ -82,6 +82,13 @@ set(Ch2-Lighting
     2.3.basic_lighting_exercise1
     2.4.basic_lighting_exercise2
     2.5.basic_lighting_exercise3
+    3.1.materials
+    3.2.materials_exercise1
+    4.1.lighting_maps_diffuse_map
+    4.2.lighting_maps_specular_map
+    4.3.lighting_maps_exercise2
+    4.4.lighting_maps_exercise3
+    4.5.lighting_maps_exercise4
 )
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)
