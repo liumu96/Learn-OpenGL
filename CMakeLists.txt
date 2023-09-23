@@ -43,6 +43,7 @@ endif(APPLE)
 set(CHAPTERS
     1.getting-started
     2.lighting
+    3.model_loading
 )
 
 set(1.getting-started
@@ -100,6 +101,9 @@ set(2.lighting
     6.multiple_lights_exercise1_factory
     6.multiple_lights_exercise1_horror
     6.multiple_lights_exercise1_biochemical_lab
+)
+set(3.model_loading
+    1.model_loading
 )
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)
