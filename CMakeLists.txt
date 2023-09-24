@@ -44,6 +44,7 @@ set(CHAPTERS
     1.getting-started
     2.lighting
     3.model_loading
+    4.advanced_opengl
 )
 
 set(1.getting-started
@@ -104,6 +105,14 @@ set(2.lighting
 )
 set(3.model_loading
     1.model_loading
+)
+
+set(4.advanced_opengl
+    1.1.depth_testing
+    1.2.depth_testing_view
+    2.stencil_testing
+    3.1.blending_discard
+    3.2.blending_sort
 )
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)
