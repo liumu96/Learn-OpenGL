@@ -11,16 +11,70 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 find_package(GLFW3 REQUIRED)
 message(STATUS "Found GLFW3 in ${GLFW3_INCLUDE_DIR}")
+set(LIBS ${GLFW3_LIBRARY})
 
-add_library(GLAD "${CMAKE_CURRENT_SOURCE_DIR}/src/glad.c")
+set(CHAPTERS
+    ch1
+)
+
+set(ch1
+    1.1.hello_window
+)
+
+add_library(GLAD "src/glad.c")
 set(LIBS ${LIBS} GLAD)
 
+function(create_project_from_sources chapter demo)
+    file(GLOB SOURCE
+        "src/${chapter}/${demo}/*.h"
+        "src/${chapter}/${demo}/*.cpp"
+        "src/${chapter}/${demo}/*.vs"
+        "src/${chapter}/${demo}/*.fs"
+        "src/${chapter}/${demo}/*.tcs"
+        "src/${chapter}/${demo}/*.tes"
+        "src/${chapter}/${demo}/*.gs"
+        "src/${chapter}/${demo}/*.cs"
+    )
+
+    if(demo STREQUAL "")
+        SET(replaced "")
+        string(REPLACE "/" "_" replaced ${chapter})
+        set(NAME ${replaced})
+    else()
+        set(NAME "${chapter}__${demo}")
+    endif()
+
+    add_executable(${NAME} ${SOURCE})
+    
+    target_link_libraries(${NAME} ${LIBS})
+
+    if(APPLE)
+        set_target_properties(${NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin/${chapter}")
+        set_target_properties(${NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY_DEBUG "${CMAKE_SOURCE_DIR}/bin/${chapter}")
+        set_target_properties(${NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_SOURCE_DIR}/bin/${chapter}")
+    endif(APPLE)
+
+    file(GLOB SHADERS
+        "src/${chapter}/${demo}/*.vs"
+        "src/${chapter}/${demo}/*.fs"
+        "src/${chapter}/${demo}/*.tcs"
+        "src/${chapter}/${demo}/*.tes"
+        "src/${chapter}/${demo}/*.gs"
+        "src/${chapter}/${demo}/*.cs"
+    )
+
+    foreach(SHADER ${SHADERS})
+        if(APPLE)
+            get_filename_component(SHADERNAME ${SHADER} NAME)
+            makeLink(${SHADER} ${CMAKE_SOURCE_DIR}/bin/${chapter}/${SHADERNAME} ${NAME})
+        endif(APPLE)
+    endforeach(SHADER)
+endfunction()
+
+foreach(CHAPTER ${CHAPTERS})
+    foreach(DEMO ${${CHAPTER}})
+        create_project_from_sources(${CHAPTER} ${DEMO})
+    endforeach(DEMO)
+endforeach(CHAPTER)
+
 include_directories(${CMAKE_SOURCE_DIR}/includes /opt/homebrew/include)
-
-# Add source files
-set(SOURCES src/main.cpp)
-
-# Add executable
-add_executable(learnopengl ${SOURCES})
-
-target_link_libraries(learnopengl ${LIBS})
