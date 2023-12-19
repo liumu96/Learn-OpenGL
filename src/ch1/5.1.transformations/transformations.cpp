@@ -49,7 +49,7 @@ int main()
 
     // build and compile our shader program
     // ------------------------------------
-    Shader ourShader("5.1.shader.vs", "5.1.shader.fs"); // you can name your shader files however you like
+    Shader ourShader("5.1.transform.vs", "5.1.transform.fs"); // you can name your shader files however you like
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
