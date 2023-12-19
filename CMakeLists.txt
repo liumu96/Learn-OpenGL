@@ -42,6 +42,10 @@ set(ch1
     5.1.transformations
     5.2.transformations_hw1
     5.3.transformations_hw2
+    6.1.coordinate_systems
+    6.2.coordinate_systems_depth
+    6.3.coordinate_systems_multiple
+    6.4.coordinate_systems_hw1
 )
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)
