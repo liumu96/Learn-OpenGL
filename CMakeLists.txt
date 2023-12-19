@@ -30,7 +30,19 @@ set(ch1
     3.4.shaders_hw1
     3.5.shaders_hw2
     3.6.shaders_hw3
+    4.1.textures
+    4.2.textures_combined
+    4.3.textures_hw1
+    4.4.textures_hw2
+    4.5.textures_hw3
+    4.6.textures_hw4
 )
+
+configure_file(configuration/root_directory.h.in configuration/root_directory.h)
+include_directories(${CMAKE_BINARY_DIR}/configuration)
+
+add_library(STB_IMAGE "src/stb_image.cpp")
+set(LIBS ${LIBS} STB_IMAGE)
 
 add_library(GLAD "src/glad.c")
 set(LIBS ${LIBS} GLAD)
