@@ -24,10 +24,20 @@ set(ch1
     2.3.hello_triangle_hw1
     2.4.hello_triangle_hw2
     2.5.hello_triangle_hw3
+    3.1.shaders_uniform
+    3.2.shaders_interpolation
+    3.3.shaders_class
+    3.4.shaders_hw1
+    3.5.shaders_hw2
+    3.6.shaders_hw3
 )
 
 add_library(GLAD "src/glad.c")
 set(LIBS ${LIBS} GLAD)
+
+macro(makeLink src dest target)
+  add_custom_command(TARGET ${target} POST_BUILD COMMAND ${CMAKE_COMMAND} -E create_symlink ${src} ${dest}  DEPENDS  ${dest} COMMENT "mklink ${src} -> ${dest}")
+endmacro()
 
 function(create_project_from_sources chapter demo)
     file(GLOB SOURCE
