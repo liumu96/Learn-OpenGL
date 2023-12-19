@@ -13,6 +13,9 @@ find_package(GLFW3 REQUIRED)
 message(STATUS "Found GLFW3 in ${GLFW3_INCLUDE_DIR}")
 set(LIBS ${GLFW3_LIBRARY})
 
+find_package(GLM REQUIRED)
+message(STATUS "GLM included at ${GLM_INCLUDE_DIR}")
+
 set(CHAPTERS
     ch1
 )
@@ -36,6 +39,9 @@ set(ch1
     4.4.textures_hw2
     4.5.textures_hw3
     4.6.textures_hw4
+    5.1.transformations
+    5.2.transformations_hw1
+    5.3.transformations_hw2
 )
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)
