@@ -94,6 +94,8 @@ set(ch4
     1.1.depth_testing
     1.2.depth_testing_view
     2.stencil_testing
+    3.1.blending_discard
+    3.2.blending_sort
 )
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)
