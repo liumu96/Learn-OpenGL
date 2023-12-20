@@ -24,6 +24,7 @@ set(CHAPTERS
     ch1
     ch2
     ch3
+    ch4
 )
 
 set(ch1
@@ -87,6 +88,11 @@ set(ch2
 
 set(ch3
     1.model_loading
+)
+
+set(ch4
+    1.1.depth_testing
+    1.2.depth_testing_view
 )
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)
