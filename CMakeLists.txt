@@ -64,6 +64,11 @@ set(ch2
     2.5.basic_lighting_hw3
     3.1.materials
     3.2.materials_hw1
+    4.1.lighting_maps_diffuse_map
+    4.2.lighting_maps_specular_map
+    4.3.lighting_maps_hw2
+    4.4.lighting_maps_hw3
+    4.5.lighting_maps_hw4
 )
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)
