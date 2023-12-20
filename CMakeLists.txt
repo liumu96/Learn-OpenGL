@@ -96,6 +96,7 @@ set(ch4
     2.stencil_testing
     3.1.blending_discard
     3.2.blending_sort
+    4.face_culling_hw
 )
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)
