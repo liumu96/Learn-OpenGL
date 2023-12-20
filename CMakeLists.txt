@@ -69,6 +69,10 @@ set(ch2
     4.3.lighting_maps_hw2
     4.4.lighting_maps_hw3
     4.5.lighting_maps_hw4
+    5.1.light_casters_directional
+    5.2.light_casters_point
+    5.3.light_casters_spot
+    5.4.light_casters_spot_soft
 )
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)
