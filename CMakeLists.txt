@@ -18,6 +18,7 @@ message(STATUS "GLM included at ${GLM_INCLUDE_DIR}")
 
 set(CHAPTERS
     ch1
+    ch2
 )
 
 set(ch1
@@ -52,6 +53,10 @@ set(ch1
     7.4.camera_class
     7.5.camera_hw1
     7.6.camera_hw2
+)
+
+set(ch2
+    1.colors
 )
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)
