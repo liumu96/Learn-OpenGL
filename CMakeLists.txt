@@ -16,9 +16,14 @@ set(LIBS ${GLFW3_LIBRARY})
 find_package(GLM REQUIRED)
 message(STATUS "GLM included at ${GLM_INCLUDE_DIR}")
 
+find_package(ASSIMP REQUIRED)
+message(STATUS "Found ASSIMP in ${ASSIMP_INCLUDE_DIR}")
+set(LIBS ${LIBS} ${ASSIMP_LIBRARY})
+
 set(CHAPTERS
     ch1
     ch2
+    ch3
 )
 
 set(ch1
@@ -78,6 +83,10 @@ set(ch2
     6.multiple_lights_factory
     6.multiple_lights_horror
     6.multiple_lights_biochemical
+)
+
+set(ch3
+    1.model_loading
 )
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)
