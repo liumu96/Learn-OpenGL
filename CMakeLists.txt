@@ -62,6 +62,8 @@ set(ch2
     2.3.basic_lighting_hw1
     2.4.basic_lighting_hw2
     2.5.basic_lighting_hw3
+    3.1.materials
+    3.2.materials_hw1
 )
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)
