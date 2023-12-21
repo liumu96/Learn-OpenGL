@@ -105,6 +105,9 @@ set(ch4
     9.1.geometry_shader_houses
     9.2.geometry_shader_exploding
     9.3.geometry_shader_normals
+    10.1.instancing_quads
+    10.2.asteroids
+    10.3.asteroids_instanced
 )
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)
