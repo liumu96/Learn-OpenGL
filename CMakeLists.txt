@@ -25,6 +25,7 @@ set(CHAPTERS
     ch2
     ch3
     ch4
+    ch5
 )
 
 set(ch1
@@ -110,6 +111,10 @@ set(ch4
     10.3.asteroids_instanced
     11.1.anti_aliasing_msaa
     11.2.anti_aliasing_offscreen
+)
+
+set(ch5 
+    1.advanced_lighting
 )
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)
