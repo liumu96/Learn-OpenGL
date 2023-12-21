@@ -99,6 +99,8 @@ set(ch4
     4.face_culling_hw
     5.1.framebuffers
     5.2.framebuffers_hw1
+    6.1.cubemaps_skybox
+    6.2.cubemaps_environment_mapping
 )
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)
