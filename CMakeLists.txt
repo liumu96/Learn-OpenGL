@@ -115,6 +115,7 @@ set(ch4
 
 set(ch5 
     1.advanced_lighting
+    2.gamma_correction
 )
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)
