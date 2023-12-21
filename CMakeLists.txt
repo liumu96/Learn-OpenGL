@@ -108,6 +108,8 @@ set(ch4
     10.1.instancing_quads
     10.2.asteroids
     10.3.asteroids_instanced
+    11.1.anti_aliasing_msaa
+    11.2.anti_aliasing_offscreen
 )
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)
