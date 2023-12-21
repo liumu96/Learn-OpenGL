@@ -102,6 +102,9 @@ set(ch4
     6.1.cubemaps_skybox
     6.2.cubemaps_environment_mapping
     8.advanced_glsl_ubo
+    9.1.geometry_shader_houses
+    9.2.geometry_shader_exploding
+    9.3.geometry_shader_normals
 )
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)
