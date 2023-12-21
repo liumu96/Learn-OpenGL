@@ -24,6 +24,7 @@ set(CHAPTERS
     ch1
     ch2
     ch3
+    ch4
 )
 
 set(ch1
@@ -87,6 +88,28 @@ set(ch2
 
 set(ch3
     1.model_loading
+)
+
+set(ch4
+    1.1.depth_testing
+    1.2.depth_testing_view
+    2.stencil_testing
+    3.1.blending_discard
+    3.2.blending_sort
+    4.face_culling_hw
+    5.1.framebuffers
+    5.2.framebuffers_hw1
+    6.1.cubemaps_skybox
+    6.2.cubemaps_environment_mapping
+    8.advanced_glsl_ubo
+    9.1.geometry_shader_houses
+    9.2.geometry_shader_exploding
+    9.3.geometry_shader_normals
+    10.1.instancing_quads
+    10.2.asteroids
+    10.3.asteroids_instanced
+    11.1.anti_aliasing_msaa
+    11.2.anti_aliasing_offscreen
 )
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)
