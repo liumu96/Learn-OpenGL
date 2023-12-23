@@ -125,6 +125,7 @@ set(ch5
     5.1.parallax_mapping
     5.2.steep_parallax_mapping
     5.3.parallax_occlusion_mapping
+    6.hdr
 )
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)
