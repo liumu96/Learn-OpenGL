@@ -121,6 +121,7 @@ set(ch5
     3.1.3.shadow_mapping
     3.2.1.point_shadows
     3.2.2.point_shadows_soft
+    4.normal_mapping
 )
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)
