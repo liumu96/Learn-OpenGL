@@ -26,6 +26,7 @@ set(CHAPTERS
     ch3
     ch4
     ch5
+    ch6
 )
 
 set(ch1
@@ -130,6 +131,15 @@ set(ch5
     8.1.deferred_shading
     8.2.deferred_shading_volumes
     9.ssao
+)
+
+set(ch6
+    1.1.lighting
+    1.2.lighting_textured
+    2.1.1.ibl_irradiance_conversion
+    2.1.2.ibl_irradiance
+    2.2.1.ibl_specular
+    2.2.2.ibl_specular_textured
 )
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)
