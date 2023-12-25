@@ -135,6 +135,7 @@ set(ch5
 
 set(ch6
     1.1.lighting
+    1.2.lighting_textured
 )
 
 configure_file(configuration/root_directory.h.in configuration/root_directory.h)
